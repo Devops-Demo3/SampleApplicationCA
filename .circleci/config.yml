@@ -20,7 +20,7 @@ workflows:
 # Define the jobs we want to run for this project
 jobs:
   build:
-    working_directory: ~/SampleApplication
+    working_directory: ~/SampleApplicationSA
     docker:
       - image: circleci/node:10.16.3
     steps:
@@ -44,4 +44,4 @@ jobs:
     steps:
       - run:
           name: deploy-application
-          command: ssh -o StrictHostKeyChecking=no $EC2_MARIUSZTEST2@$EC2_PUBLIC_DNS2 "rm -rf SampleApplication/;git clone https://github.com/Devops-Demo3/SampleApplicationCA.git; source SampleApplication/deploy.sh"
+          command: ssh -o StrictHostKeyChecking=no $EC2_MARIUSZTEST2@$EC2_PUBLIC_DNS2 "rm -rf SampleApplicationCA/;git clone https://github.com/Devops-Demo3/SampleApplicationCA.git; source SampleApplicationCA/deploy.sh"
