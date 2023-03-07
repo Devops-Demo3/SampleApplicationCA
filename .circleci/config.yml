@@ -20,7 +20,7 @@ workflows:
 # Define the jobs we want to run for this project
 jobs:
   build:
-    working_directory: ~/SampleApplicationSA
+    working_directory: ~/SampleApplicationCA
     docker:
       - image: circleci/node:10.16.3
     steps:
