@@ -44,4 +44,4 @@ jobs:
     steps:
       - run:
           name: deploy-application
-          command: ssh -o StrictHostKeyChecking=no $EC2_MARIUSZTEST2@$EC2_PUBLIC_DNS2 "rm -rf SampleApplication/;git clone https://github.com/Devops-Demo3/SampleApplicationCA.git; source SampleApplication/deploy.sh"
+          command: ssh -o StrictHostKeyChecking=no $EC2_MARIUSZTEST2@$EC2_PUBLIC_DNS2 "rm -rf SampleApplicationCA/;git clone https://github.com/Devops-Demo3/SampleApplicationCA.git; source SampleApplication/deploy.sh"
